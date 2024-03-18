@@ -100,6 +100,7 @@ class ComposerStaticInit3d7aaf1866df64911154060e3a32f321
         'J' => 
         array (
             'JMS\\Serializer\\' => 15,
+            'JMS\\SerializerBundle\\' => 21,
         ),
         'D' => 
         array (
@@ -362,6 +363,10 @@ class ComposerStaticInit3d7aaf1866df64911154060e3a32f321
         'JMS\\Serializer\\' => 
         array (
             0 => __DIR__ . '/..' . '/jms/serializer/src',
+        ),
+        'JMS\\SerializerBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jms/serializer-bundle',
         ),
         'Doctrine\\SqlFormatter\\' => 
         array (

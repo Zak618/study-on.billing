@@ -199,6 +199,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'jms/serializer-bundle' => array(
+            'pretty_version' => '5.4.0',
+            'version' => '5.4.0.0',
+            'reference' => '6fa2dd0083e00fe21c5da171556d7ecabc14b437',
+            'type' => 'symfony-bundle',
+            'install_path' => __DIR__ . '/../jms/serializer-bundle',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'lcobucci/clock' => array(
             'pretty_version' => '3.2.0',
             'version' => '3.2.0.0',
@@ -782,9 +791,9 @@
             'dev_requirement' => false,
         ),
         'symfony/validator' => array(
-            'pretty_version' => 'v6.3.11',
-            'version' => '6.3.11.0',
-            'reference' => 'e35e841744bc8d3c54ffd35f06e22e02b36d6209',
+            'pretty_version' => 'v6.3.12',
+            'version' => '6.3.12.0',
+            'reference' => '5e3ac975cc36d22db979225c587eed3d1f172bb8',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/validator',
             'aliases' => array(),
