@@ -10,6 +10,7 @@ return [
     [ // $staticRoutes
         '/api/v1/auth' => [[['_route' => 'api_auth', '_controller' => 'App\\Controller\\AuthController::login'], null, null, null, false, false, null]],
         '/api/v1/register' => [[['_route' => 'api_register', '_controller' => 'App\\Controller\\AuthController::register'], null, ['POST' => 0], null, false, false, null]],
+        '/api/v1/users/current' => [[['_route' => 'get_current_user', '_controller' => 'App\\Controller\\AuthController::getCurrentUser'], null, ['GET' => 0], null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

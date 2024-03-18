@@ -25,6 +25,7 @@ class AppFixtures extends Fixture
         $password = $this->hash->hashPassword($user, 'password');
         $user->setEmail("user@gmail.com");
         $user->setPassword($password);
+        $user->setBalance(100.0);
 
         $manager->persist($user);
 
@@ -35,6 +36,7 @@ class AppFixtures extends Fixture
         $adminPassword = $this->hash->hashPassword($admin, 'password');
         $admin->setEmail("admin@gmail.com");
         $admin->setPassword($adminPassword);
+        $admin->setBalance(100.0);
 
         $manager->persist($admin);
 

@@ -14,6 +14,8 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
+use Symfony\Component\Security\Http\Attribute\CurrentUser;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class AuthController extends AbstractController
 {
@@ -52,6 +54,20 @@ class AuthController extends AbstractController
         return $this->json([
             'token' => $token,
             'roles' => $user->getRoles(),
+        ]);
+    }
+
+    #[Route('/api/v1/users/current', name: 'get_current_user', methods: ['GET'])]
+    public function getCurrentUser(#[CurrentUser] ?User $user): JsonResponse
+    {
+        if (!$user) {
+            return $this->json(['message' => 'Пользователь не найден('], 404);
+        }
+
+        return $this->json([
+            'username' => $user->getUserIdentifier(),
+            'roles' => $user->getRoles(),
+            'balance' => $user->getBalance(),
         ]);
     }
 }

@@ -251,7 +251,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
       <tag priority="-50" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">controller.argument_value_resolver</tag>
-      <argument type="service" id=".service_locator.pH02c4o"/>
+      <argument type="service" id=".service_locator.apIDBKH"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">
       <tag priority="-100" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">controller.argument_value_resolver</tag>
@@ -1441,7 +1441,7 @@
     </service>
     <service id="argument_resolver.not_tagged_controller" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
       <tag name="controller.argument_value_resolver" priority="-200"/>
-      <argument type="service" id=".service_locator.pH02c4o"/>
+      <argument type="service" id=".service_locator.apIDBKH"/>
     </service>
     <service id="routing.resolver" class="Symfony\Component\Config\Loader\LoaderResolver">
       <call method="addLoader">
@@ -3328,7 +3328,7 @@
       <call method="add">
         <argument type="service" id=".security.request_matcher.VZsv3Dl"/>
         <argument type="collection">
-          <argument>PUBLIC_ACCESS</argument>
+          <argument>IS_AUTHENTICATED_ANONYMOUSLY</argument>
         </argument>
         <argument>null</argument>
       </call>
@@ -5473,7 +5473,11 @@
         <argument key="validator" type="service_closure" id="validator"/>
       </argument>
     </service>
-    <service id=".service_locator.pH02c4o" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.EeknzOa" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
+    <service id=".service_locator.apIDBKH" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AuthController::register" type="service_closure" id=".service_locator.KuajCdM"/>
@@ -6923,7 +6927,7 @@
     <service id="jms_serializer.instance.default.metadata.traceable_file_locator" alias="jms_serializer.metadata.traceable_file_locator"/>
     <service id="jms_serializer.instances.default" alias="jms_serializer.serializer" public="true"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.7nzbL4K" public="true"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.pH02c4o"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.apIDBKH"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="jms_serializer.authorization_checker" alias="security.authorization_checker" public="true"/>
     <service id="Psr\Log\LoggerInterface" alias="logger"/>
@@ -6933,7 +6937,7 @@
     <service id=".service_locator.13qzyLC" alias="jms_serializer.metadata.service_locator"/>
     <service id=".service_locator.o.uf2zi" alias=".service_locator.7nzbL4K"/>
     <service id=".service_locator.QHlhC7_" alias=".service_locator.KuajCdM"/>
-    <service id=".service_locator.OL2V5m." alias=".service_locator.pH02c4o"/>
+    <service id=".service_locator.RfoDUtj" alias=".service_locator.apIDBKH"/>
     <service id=".service_locator.BFrsqsn" alias=".service_locator.F9PKc.7"/>
     <service id=".service_locator.LMuqDDe" alias=".service_locator.VHsrTPK"/>
     <service id=".service_locator.jUv.zyj" alias=".service_locator.O2p6Lk7"/>
