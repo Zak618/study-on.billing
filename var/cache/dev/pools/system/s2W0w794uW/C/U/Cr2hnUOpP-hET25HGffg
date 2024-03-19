@@ -1,3 +1,226 @@
 <?php //App%255CController%255CAuthController%2523register
 
-return [PHP_INT_MAX, []];
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['OpenApi\\Annotations\\Post'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('OpenApi\\Annotations\\Post')),
+        clone ($p['OpenApi\\Context'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('OpenApi\\Context')),
+        clone ($p['OpenApi\\Loggers\\DefaultLogger'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('OpenApi\\Loggers\\DefaultLogger')),
+        clone ($p['OpenApi\\Annotations\\RequestBody'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('OpenApi\\Annotations\\RequestBody')),
+        clone $p['OpenApi\\Context'],
+        clone $p['OpenApi\\Loggers\\DefaultLogger'],
+        clone ($p['OpenApi\\Annotations\\JsonContent'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('OpenApi\\Annotations\\JsonContent')),
+        clone $p['OpenApi\\Context'],
+        clone $p['OpenApi\\Loggers\\DefaultLogger'],
+        clone ($p['Nelmio\\ApiDocBundle\\Annotation\\Model'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Nelmio\\ApiDocBundle\\Annotation\\Model')),
+        clone $p['OpenApi\\Context'],
+        clone $p['OpenApi\\Loggers\\DefaultLogger'],
+        clone ($p['OpenApi\\Annotations\\Response'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('OpenApi\\Annotations\\Response')),
+        clone $p['OpenApi\\Context'],
+        clone $p['OpenApi\\Loggers\\DefaultLogger'],
+        clone $p['OpenApi\\Annotations\\JsonContent'],
+        clone $p['OpenApi\\Context'],
+        clone $p['OpenApi\\Loggers\\DefaultLogger'],
+        clone ($p['OpenApi\\Annotations\\Property'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('OpenApi\\Annotations\\Property')),
+        clone $p['OpenApi\\Context'],
+        clone $p['OpenApi\\Loggers\\DefaultLogger'],
+        clone $p['OpenApi\\Annotations\\Property'],
+        clone $p['OpenApi\\Context'],
+        clone $p['OpenApi\\Loggers\\DefaultLogger'],
+        clone ($p['OpenApi\\Annotations\\Items'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('OpenApi\\Annotations\\Items')),
+        clone $p['OpenApi\\Context'],
+        clone $p['OpenApi\\Loggers\\DefaultLogger'],
+        clone $p['OpenApi\\Annotations\\Response'],
+        clone $p['OpenApi\\Context'],
+        clone $p['OpenApi\\Loggers\\DefaultLogger'],
+    ],
+    null,
+    [
+        'stdClass' => [
+            '_context' => [
+                $o[1],
+                3 => $o[4],
+                6 => $o[7],
+                9 => $o[10],
+                12 => $o[13],
+                15 => $o[16],
+                18 => $o[19],
+                21 => $o[22],
+                24 => $o[25],
+                27 => $o[28],
+            ],
+            'path' => [
+                '/api/v1/register',
+            ],
+            'summary' => [
+                'Регистрация нового пользователя',
+            ],
+            'description' => [
+                'Создает нового пользователя и возвращает JWT токен.',
+                3 => 'Данные нового пользователя',
+                12 => 'Пользователь успешно создан',
+                27 => 'Неверные данные для регистрации',
+            ],
+            'requestBody' => [
+                $o[3],
+            ],
+            'responses' => [
+                [
+                    $o[12],
+                    $o[27],
+                ],
+            ],
+            'logger' => [
+                1 => $o[2],
+                4 => $o[5],
+                7 => $o[8],
+                10 => $o[11],
+                13 => $o[14],
+                16 => $o[17],
+                19 => $o[20],
+                22 => $o[23],
+                25 => $o[26],
+                28 => $o[29],
+            ],
+            'filename' => [
+                1 => '/app/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                4 => '/app/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                7 => '/app/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                10 => '/app/vendor/zircote/swagger-php/src/Attributes/Attachable.php',
+                13 => '/app/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                16 => '/app/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                19 => '/app/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                22 => '/app/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                25 => '/app/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                28 => '/app/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+            ],
+            'line' => [
+                1 => 1481,
+                4 => 1481,
+                7 => 1481,
+                10 => 14,
+                13 => 1481,
+                16 => 1481,
+                19 => 1481,
+                22 => 1481,
+                25 => 1481,
+                28 => 1481,
+            ],
+            'method' => [
+                1 => 'instantiateAnnotiation',
+                4 => 'instantiateAnnotiation',
+                7 => 'instantiateAnnotiation',
+                10 => '__construct',
+                13 => 'instantiateAnnotiation',
+                16 => 'instantiateAnnotiation',
+                19 => 'instantiateAnnotiation',
+                22 => 'instantiateAnnotiation',
+                25 => 'instantiateAnnotiation',
+                28 => 'instantiateAnnotiation',
+            ],
+            'class' => [
+                1 => 'DocParser',
+                4 => 'DocParser',
+                7 => 'DocParser',
+                10 => 'Attachable',
+                13 => 'DocParser',
+                16 => 'DocParser',
+                19 => 'DocParser',
+                22 => 'DocParser',
+                25 => 'DocParser',
+                28 => 'DocParser',
+            ],
+            'namespace' => [
+                1 => 'Doctrine\\Common\\Annotations',
+                4 => 'Doctrine\\Common\\Annotations',
+                7 => 'Doctrine\\Common\\Annotations',
+                10 => 'OpenApi\\Attributes',
+                13 => 'Doctrine\\Common\\Annotations',
+                16 => 'Doctrine\\Common\\Annotations',
+                19 => 'Doctrine\\Common\\Annotations',
+                22 => 'Doctrine\\Common\\Annotations',
+                25 => 'Doctrine\\Common\\Annotations',
+                28 => 'Doctrine\\Common\\Annotations',
+            ],
+            'annotations' => [
+                1 => [
+                    $o[0],
+                ],
+                4 => [
+                    $o[3],
+                ],
+                7 => [
+                    $o[6],
+                ],
+                10 => [
+                    $o[9],
+                ],
+                13 => [
+                    $o[12],
+                ],
+                16 => [
+                    $o[15],
+                ],
+                19 => [
+                    $o[18],
+                ],
+                22 => [
+                    $o[21],
+                ],
+                25 => [
+                    $o[24],
+                ],
+                28 => [
+                    $o[27],
+                ],
+            ],
+            '_unmerged' => [
+                3 => [
+                    $o[6],
+                ],
+                12 => [
+                    $o[15],
+                ],
+            ],
+            'required' => [
+                3 => true,
+            ],
+            'ref' => [
+                6 => $o[9],
+            ],
+            'type' => [
+                9 => 'App\\Dto\\RegistrationRequest',
+                15 => 'object',
+                18 => 'string',
+                21 => 'array',
+                24 => 'string',
+            ],
+            'serializationContext' => [
+                9 => [],
+            ],
+            'response' => [
+                12 => 201,
+                27 => 400,
+            ],
+            'properties' => [
+                15 => [
+                    $o[18],
+                    $o[21],
+                ],
+            ],
+            'example' => [
+                18 => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...',
+            ],
+            'property' => [
+                18 => 'token',
+                21 => 'roles',
+            ],
+            'items' => [
+                21 => $o[24],
+            ],
+        ],
+    ],
+    [
+        $o[0],
+    ],
+    []
+); }];

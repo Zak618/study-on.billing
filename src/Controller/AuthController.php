@@ -16,6 +16,9 @@ use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Security\Http\Attribute\CurrentUser;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use OpenApi\Annotations as OA;
+use Nelmio\ApiDocBundle\Annotation\Model;
+
 
 class AuthController extends AbstractController
 {
@@ -25,6 +28,34 @@ class AuthController extends AbstractController
         throw new \LogicException('Этот метод не следует вызывать напрямую.');
     }
 
+
+    /**
+     * @OA\Post(
+     *     path="/api/v1/register",
+     *     summary="Регистрация нового пользователя",
+     *     description="Создает нового пользователя и возвращает JWT токен.",
+     *     @OA\RequestBody(
+     *         description="Данные нового пользователя",
+     *         required=true,
+     *         @OA\JsonContent(
+     *             ref=@Model(type=RegistrationRequest::class)
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=201,
+     *         description="Пользователь успешно создан",
+     *         @OA\JsonContent(
+     *             type="object",
+     *             @OA\Property(property="token", type="string", example="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."),
+     *             @OA\Property(property="roles", type="array", @OA\Items(type="string"))
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=400,
+     *         description="Неверные данные для регистрации"
+     *     )
+     * )
+     */
     #[Route('/api/v1/register', name: 'api_register', methods: ['POST'])]
     public function register(Request $request, SerializerInterface $serializer, ValidatorInterface $validator, TokenGeneratorInterface $tokenGenerator, UserPasswordHasherInterface $passwordHasher, EntityManagerInterface $entityManager, UserRepository $userRepository): Response
     {
@@ -56,6 +87,28 @@ class AuthController extends AbstractController
             'roles' => $user->getRoles(),
         ]);
     }
+
+    /**
+    * @OA\Get(
+        *     path="/api/v1/users/current",
+        *     summary="Получение информации о текущем пользователе",
+        *     description="Возвращает информацию о текущем аутентифицированном пользователе.",
+        *     @OA\Response(
+        *         response=200,
+        *         description="Информация о пользователе",
+        *         @OA\JsonContent(
+        *             type="object",
+        *             @OA\Property(property="username", type="string", example="user@example.com"),
+        *             @OA\Property(property="roles", type="array", @OA\Items(type="string")),
+        *             @OA\Property(property="balance", type="number", example=100.0)
+        *         )
+        *     ),
+        *     @OA\Response(
+        *         response=404,
+        *         description="Пользователь не найден"
+        *     )
+        * )
+        */
 
     #[Route('/api/v1/users/current', name: 'get_current_user', methods: ['GET'])]
     public function getCurrentUser(#[CurrentUser] ?User $user): JsonResponse

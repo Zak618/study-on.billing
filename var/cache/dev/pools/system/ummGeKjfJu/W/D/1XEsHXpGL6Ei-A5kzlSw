@@ -1,0 +1,3 @@
+<?php //App%255CController%255CAuthController%2523getCurrentUser
+
+return [PHP_INT_MAX, []];

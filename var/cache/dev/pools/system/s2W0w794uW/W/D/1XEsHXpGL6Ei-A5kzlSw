@@ -1,3 +1,187 @@
 <?php //App%255CController%255CAuthController%2523getCurrentUser
 
-return [PHP_INT_MAX, []];
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['OpenApi\\Annotations\\Get'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('OpenApi\\Annotations\\Get')),
+        clone ($p['OpenApi\\Context'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('OpenApi\\Context')),
+        clone ($p['OpenApi\\Loggers\\DefaultLogger'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('OpenApi\\Loggers\\DefaultLogger')),
+        clone ($p['OpenApi\\Annotations\\Response'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('OpenApi\\Annotations\\Response')),
+        clone $p['OpenApi\\Context'],
+        clone $p['OpenApi\\Loggers\\DefaultLogger'],
+        clone ($p['OpenApi\\Annotations\\JsonContent'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('OpenApi\\Annotations\\JsonContent')),
+        clone $p['OpenApi\\Context'],
+        clone $p['OpenApi\\Loggers\\DefaultLogger'],
+        clone ($p['OpenApi\\Annotations\\Property'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('OpenApi\\Annotations\\Property')),
+        clone $p['OpenApi\\Context'],
+        clone $p['OpenApi\\Loggers\\DefaultLogger'],
+        clone $p['OpenApi\\Annotations\\Property'],
+        clone $p['OpenApi\\Context'],
+        clone $p['OpenApi\\Loggers\\DefaultLogger'],
+        clone ($p['OpenApi\\Annotations\\Items'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('OpenApi\\Annotations\\Items')),
+        clone $p['OpenApi\\Context'],
+        clone $p['OpenApi\\Loggers\\DefaultLogger'],
+        clone $p['OpenApi\\Annotations\\Property'],
+        clone $p['OpenApi\\Context'],
+        clone $p['OpenApi\\Loggers\\DefaultLogger'],
+        clone $p['OpenApi\\Annotations\\Response'],
+        clone $p['OpenApi\\Context'],
+        clone $p['OpenApi\\Loggers\\DefaultLogger'],
+    ],
+    null,
+    [
+        'stdClass' => [
+            '_context' => [
+                $o[1],
+                3 => $o[4],
+                6 => $o[7],
+                9 => $o[10],
+                12 => $o[13],
+                15 => $o[16],
+                18 => $o[19],
+                21 => $o[22],
+            ],
+            'path' => [
+                '/api/v1/users/current',
+            ],
+            'summary' => [
+                'Получение информации о текущем пользователе',
+            ],
+            'description' => [
+                'Возвращает информацию о текущем аутентифицированном пользователе.',
+                3 => 'Информация о пользователе',
+                21 => 'Пользователь не найден',
+            ],
+            'responses' => [
+                [
+                    $o[3],
+                    $o[21],
+                ],
+            ],
+            'logger' => [
+                1 => $o[2],
+                4 => $o[5],
+                7 => $o[8],
+                10 => $o[11],
+                13 => $o[14],
+                16 => $o[17],
+                19 => $o[20],
+                22 => $o[23],
+            ],
+            'filename' => [
+                1 => '/app/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                4 => '/app/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                7 => '/app/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                10 => '/app/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                13 => '/app/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                16 => '/app/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                19 => '/app/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                22 => '/app/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+            ],
+            'line' => [
+                1 => 1481,
+                4 => 1481,
+                7 => 1481,
+                10 => 1481,
+                13 => 1481,
+                16 => 1481,
+                19 => 1481,
+                22 => 1481,
+            ],
+            'method' => [
+                1 => 'instantiateAnnotiation',
+                4 => 'instantiateAnnotiation',
+                7 => 'instantiateAnnotiation',
+                10 => 'instantiateAnnotiation',
+                13 => 'instantiateAnnotiation',
+                16 => 'instantiateAnnotiation',
+                19 => 'instantiateAnnotiation',
+                22 => 'instantiateAnnotiation',
+            ],
+            'class' => [
+                1 => 'DocParser',
+                4 => 'DocParser',
+                7 => 'DocParser',
+                10 => 'DocParser',
+                13 => 'DocParser',
+                16 => 'DocParser',
+                19 => 'DocParser',
+                22 => 'DocParser',
+            ],
+            'namespace' => [
+                1 => 'Doctrine\\Common\\Annotations',
+                4 => 'Doctrine\\Common\\Annotations',
+                7 => 'Doctrine\\Common\\Annotations',
+                10 => 'Doctrine\\Common\\Annotations',
+                13 => 'Doctrine\\Common\\Annotations',
+                16 => 'Doctrine\\Common\\Annotations',
+                19 => 'Doctrine\\Common\\Annotations',
+                22 => 'Doctrine\\Common\\Annotations',
+            ],
+            'annotations' => [
+                1 => [
+                    $o[0],
+                ],
+                4 => [
+                    $o[3],
+                ],
+                7 => [
+                    $o[6],
+                ],
+                10 => [
+                    $o[9],
+                ],
+                13 => [
+                    $o[12],
+                ],
+                16 => [
+                    $o[15],
+                ],
+                19 => [
+                    $o[18],
+                ],
+                22 => [
+                    $o[21],
+                ],
+            ],
+            '_unmerged' => [
+                3 => [
+                    $o[6],
+                ],
+            ],
+            'response' => [
+                3 => 200,
+                21 => 404,
+            ],
+            'properties' => [
+                6 => [
+                    $o[9],
+                    $o[12],
+                    $o[18],
+                ],
+            ],
+            'type' => [
+                6 => 'object',
+                9 => 'string',
+                12 => 'array',
+                15 => 'string',
+                18 => 'number',
+            ],
+            'example' => [
+                9 => 'user@example.com',
+                18 => 100.0,
+            ],
+            'property' => [
+                9 => 'username',
+                12 => 'roles',
+                18 => 'balance',
+            ],
+            'items' => [
+                12 => $o[15],
+            ],
+        ],
+    ],
+    [
+        $o[0],
+    ],
+    []
+); }];
