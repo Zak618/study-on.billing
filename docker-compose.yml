@@ -4,6 +4,7 @@ volumes:
 services:
   nginx:
     image: nginx:alpine
+    container_name: billing.study-on.local
     working_dir: /app
     volumes:
       - ${PWD}:/app
