@@ -24,7 +24,7 @@ class Course
     private ?string $code = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $name = null;
+    private ?string $title = null; // новое поле title
 
     #[ORM\Column(type: "text", nullable: true)]
     private ?string $description = null;
@@ -60,15 +60,14 @@ class Course
         return $this;
     }
 
-    public function getName(): ?string
+    public function getTitle(): ?string
     {
-        return $this->name;
+        return $this->title;
     }
 
-    public function setName(?string $name): self
+    public function setTitle(?string $title): self
     {
-        $this->name = $name;
-
+        $this->title = $title;
         return $this;
     }
 
