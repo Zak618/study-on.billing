@@ -8,7 +8,8 @@ use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\PasswordUpgraderInterface;
-
+use DateTime;
+use App\Entity\Course;
 /**
  * @extends ServiceEntityRepository<User>
  *
@@ -39,7 +40,23 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
         $this->getEntityManager()->persist($user);
         $this->getEntityManager()->flush();
     }
+    public function findUsersWithEndingRentals(): array
+    {
+        $tomorrow = (new DateTime())->modify('+1 day')->setTime(0, 0, 0);
+        $dayAfterTomorrow = (new DateTime())->modify('+2 days')->setTime(0, 0, 0);
 
+        $qb = $this->createQueryBuilder('u')
+            ->innerJoin('u.transactions', 't')
+            ->innerJoin('t.course', 'c')
+            ->andWhere('t.expiresAt BETWEEN :start AND :end')
+            ->andWhere('c.type = :type')
+            ->setParameter('start', $tomorrow)
+            ->setParameter('end', $dayAfterTomorrow)
+            ->setParameter('type', Course::TYPE_RENT)
+            ->groupBy('u.id');
+
+        return $qb->getQuery()->getResult();
+    }
 //    /**
 //     * @return User[] Returns an array of User objects
 //     */

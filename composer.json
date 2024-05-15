@@ -24,6 +24,7 @@
         "symfony/dotenv": "6.3.*",
         "symfony/flex": "^2",
         "symfony/framework-bundle": "6.3.*",
+        "symfony/mailer": "6.3.*",
         "symfony/maker-bundle": "^1.53",
         "symfony/phpunit-bridge": "^6.3",
         "symfony/property-access": "6.3.*",
